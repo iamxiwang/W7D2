@@ -8,9 +8,27 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style>
+    .flex-list {
+      background: blue;
+      display: flex;
+      flex-direction: column;
+      align-item: center;
+
+    }
+
+    .header {
+      color: yellow;
+      font-weight: bold;
+      font-size: 40px;
+    }
+    
+    
+    </style>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="flex-list">
+       <header class="header">MUSIC APP</header>
+  <%= yield %>
   </body>
 </html>
